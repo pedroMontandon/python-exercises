@@ -9,7 +9,3 @@ def find_duplicate(nums):
         return False
     except TypeError:
         return False
-   
-
-print(find_duplicate([3, 1, 3, 4, 2]))
-print(find_duplicate([1, 3, 4, 2, 2]))
