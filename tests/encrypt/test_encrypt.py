@@ -7,4 +7,6 @@ def test_encrypt_message():
         encrypt_message('Chapolin', 'colorado')
     with pytest.raises(TypeError, match="tipo inválido para message"):
         encrypt_message(1, 4)
-    assert encrypt_message('Chapolin', 56) == ''
+    assert encrypt_message('Chapolin', 56) == 'nilopahC'
+    assert encrypt_message('Chapolin', 2) == 'nilopa_hC'
+    assert encrypt_message('Chapolin', 3) == 'ahC_nilop'
