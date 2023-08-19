@@ -3,17 +3,15 @@ def is_anagram(first_string, second_string):
         return ('', '', False)
     sorted1 = merge_sort(list(first_string.lower()))
     sorted2 = merge_sort(list(second_string.lower()))
-      
+
     if len(first_string) != len(second_string):
         return (''.join(sorted1), ''.join(sorted2), False)
-    
     return (''.join(sorted1), ''.join(sorted2), sorted1 == sorted2)
 
 
 def merge_sort(string):
     if len(string) <= 1:
         return string
-    
     mid = len(string) // 2
     left = merge_sort(string[:mid])
     right = merge_sort(string[mid:])
@@ -31,7 +29,6 @@ def merge(left, right):
         else:
             result.append(right[right_index])
             right_index += 1
-    
     result.extend(left[left_index:])
     result.extend(right[right_index:])
     return result
@@ -40,4 +37,3 @@ def merge(left, right):
 print(is_anagram('roma', 'amor'))
 print(is_anagram('rio', 'ryo'))
 print(is_anagram('pedra', 'perdaaa'))
-
